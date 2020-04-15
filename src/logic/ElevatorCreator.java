@@ -24,12 +24,13 @@ public class ElevatorCreator {
         Elevator elevator = new Elevator();
         
         for(int i = 0; i <= lowest + highest; i++){
+            int floor = -lowest + i;
             if(i == 0)
-                elevator.add((-lowest + i), true, false);
-            else if (i == highest)
-                elevator.add((-lowest + i), false, true);
+                elevator.add(floor, true, false);
+            else if (i == (lowest + highest))
+                elevator.add(floor, false, true);
             else
-                elevator.add((-lowest + i), true, true);
+                elevator.add(floor, true, true);
         }
         
         elevator.install();

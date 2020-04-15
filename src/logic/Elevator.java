@@ -25,10 +25,9 @@ public class Elevator {
     
     public void install(){
         for (int i = 0; i < elevator.size(); i++){
-            System.out.println(elevator.get(i).getName());
             if(elevator.get(i).getHeight()==0){
                 changeFloor(i);
-                //return;
+                return;
             }
         }
     }
