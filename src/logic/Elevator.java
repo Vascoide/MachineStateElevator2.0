@@ -55,6 +55,10 @@ public class Elevator {
         currFloor.bottom();
     }
     
+    public String getFloorName(){
+        return currFloor.getName();
+    }
+    
     private void changeFloor(int i){
         currFloor = new FloorState(elevator.get(i));
     }

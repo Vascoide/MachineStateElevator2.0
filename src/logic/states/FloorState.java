@@ -61,6 +61,13 @@ public class FloorState implements IState {
         return floorData.getHeight();
     }
 
+    @Override
+    public String getName() {
+        return floorData.getName();
+    }
+    
+    
+
     
 
 }

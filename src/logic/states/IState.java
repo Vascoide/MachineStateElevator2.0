@@ -17,4 +17,5 @@ public interface IState {
     public boolean canGoUp();
     public boolean canGoDown();
     public int getHeight();
+    public String getName();
 }
