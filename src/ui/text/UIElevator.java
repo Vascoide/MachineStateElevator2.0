@@ -29,8 +29,8 @@ public class UIElevator {
     }
     
     private void awaitButton(){
-        System.out.println("### Elevator");
-        System.out.println("### Elevador");
+        System.out.println("Elevator 2.0");
+        System.out.println(elevator.getFloorName());
         Scanner sc = new Scanner(System.in);
         
         

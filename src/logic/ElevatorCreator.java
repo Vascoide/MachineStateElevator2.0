@@ -18,21 +18,18 @@ public class ElevatorCreator {
     int lowest;
     
     public Elevator create(){
-        
-        
-        
-        lowest = getLowest() * -1;
+        lowest = getLowest();
         highest = getHighest();
         
         Elevator elevator = new Elevator();
         
         for(int i = 0; i <= lowest + highest; i++){
             if(i == 0)
-                elevator.add((lowest + i), true, false);
+                elevator.add((-lowest + i), true, false);
             else if (i == highest)
-                elevator.add((lowest + i), false, true);
+                elevator.add((-lowest + i), false, true);
             else
-                elevator.add((lowest + i), true, true);
+                elevator.add((-lowest + i), true, true);
         }
         
         elevator.install();
