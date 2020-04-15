@@ -25,10 +25,10 @@ public class Elevator {
     
     public void install(){
         for (int i = 0; i < elevator.size(); i++){
-            //System.out.println(elevator.get(i).getName());
+            System.out.println(elevator.get(i).getName());
             if(elevator.get(i).getHeight()==0){
                 changeFloor(i);
-                return;
+                //return;
             }
         }
     }
@@ -66,6 +66,10 @@ public class Elevator {
     }
     
     private int getCurrentHeight(){
-        return currFloor.getHeight();
+        for (int i = 0; i < elevator.size(); i++) {
+            if(elevator.get(i).getHeight() == currFloor.getHeight())
+                return i;   
+        }
+        return -1;
     }
 }

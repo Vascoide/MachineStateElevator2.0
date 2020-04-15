@@ -38,12 +38,17 @@ public class FloorData {
         if(height == 0)
             return "You're at the ground floor!!";
         else
-            return "You are the " + ordinal(height) + ((height < 0) ? " underground": " ") + "floor!!";
+            return "You are the " + ordinal(height) + ((height < 0) ? " underground": "") + " floor!!";
     }
     
     private String ordinal(int number){
+        
+        if(number < 0)
+            number = -number;
+        
         int mod100 = number % 100;
         int mod10 = number % 10;
+        
         if(mod10 == 1 && mod100 != 11) {
             return number + "st";
         } else if(mod10 == 2 && mod100 != 12) {
